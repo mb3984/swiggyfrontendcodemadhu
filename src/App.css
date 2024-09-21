@@ -117,14 +117,36 @@ body {
   font-weight: 600;
 }
 
+/* Adjust the checkbox container for all screens */
 .checkInp {
   width: 100%;
   max-width: 85%;
   display: flex;
+  align-items: center; /* Align label and checkbox vertically */
+  justify-content: flex-start;
+  margin-bottom: 10px; /* Space between checkboxes */
 }
 
 .checkInp label {
-  width: 20%;
+  margin-left: 10px; /* Space between checkbox and text */
+}
+
+/* Laptop and larger screen adjustments */
+@media (min-width: 1024px) {
+  .checkInp {
+    max-width: 80%; /* Allow more width for checkboxes on larger screens */
+  }
+
+  .checboxContainer {
+    flex-direction: row; /* Ensure horizontal alignment on larger screens */
+    justify-content: flex-start;
+    max-width: 60%;
+    margin-left: 0;
+  }
+
+  .checkInp label {
+    margin-left: 15px; /* Additional spacing for larger screens */
+  }
 }
 
 .inputsContainer {
@@ -318,6 +340,6 @@ h3 {
 
   .showPassword {
     bottom: 60px;
-    right: 15px;
+    right: 13px;
   }
 }

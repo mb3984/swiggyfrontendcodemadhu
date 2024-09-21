@@ -36,9 +36,7 @@ const Register = ({ showLoginHandler }) => {
         showLoginHandler();
       } else {
         setError(data.error);
-        alert(
-          "Registration Failed, Already used same name and email Please give another name,email"
-        );
+        alert("Registration Failed, Please give another Name,Email");
       }
     } catch (error) {
       console.error("Registration failed", error);
